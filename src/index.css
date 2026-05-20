@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ===============================
+       LIGHT PREMIUM CONSULTANCY THEME
+    =============================== */
+
+    /* Main Backgrounds */
+    --background: 231 75% 97%;
+    --foreground: 232 18% 16%;
+
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 232 18% 16%;
+
+    /* Popovers */
+    --popover: 0 0% 100%;
+    --popover-foreground: 232 18% 16%;
+
+    /* Primary — Indigo */
+    --primary: 231 49% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary — Deep Indigo */
+    --secondary: 231 94% 33%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted Sections */
+    --muted: 222 57% 94%;
+    --muted-foreground: 232 18% 16%;
+
+    /* Accent — Lavender Gray */
+    --accent: 231 58% 91%;
+    --accent-foreground: 232 18% 16%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 222 57% 94%;
+    --input: 222 57% 94%;
+    --ring: 231 49% 47%;
+
+    /* Radius */
+    --radius: 1rem;
+
+    /* ===============================
+       BRAND TOKENS
+    =============================== */
+
+    --mmp-indigo: 231 49% 47%;
+    --mmp-deep-indigo: 231 94% 33%;
+    --mmp-lavender-gray: 231 58% 91%;
+    --mmp-dark: 232 18% 16%;
+    --mmp-text-soft: 232 18% 16%;
+    --mmp-light-bg: 231 75% 97%;
+
+    /* ===============================
+       GRADIENTS
+    =============================== */
+
+    --gradient-banner:
+      linear-gradient(
+        135deg,
+        hsl(var(--primary)),
+        hsl(var(--secondary))
+      );
+
+    --gradient-hero:
+      radial-gradient(
+        ellipse at top,
+        hsla(var(--primary) / 0.12),
+        transparent 65%
+      );
+
+    /* ===============================
+       SIDEBAR
+    =============================== */
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 232 18% 16%;
+    --sidebar-primary: 231 49% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 231 58% 91%;
+    --sidebar-accent-foreground: 232 18% 16%;
+    --sidebar-border: 222 57% 94%;
+    --sidebar-ring: 231 49% 47%;
+  }
+
+  .dark {
+    /* Optional soft dark mode */
+
+    --background: 220 18% 10%;
+    --foreground: 220 12% 92%;
+
+    --card: 220 16% 14%;
+    --card-foreground: 220 12% 92%;
+
+    --popover: 220 16% 14%;
+    --popover-foreground: 220 12% 92%;
+
+    --primary: 35 38% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 220 12% 92%;
+
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 10% 72%;
+
+    --accent: 220 14% 78%;
+    --accent-foreground: 220 15% 18%;
+
+    --border: 220 12% 22%;
+    --input: 220 12% 22%;
+    --ring: 35 38% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(var(--background));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  section {
+    @apply relative overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .text-highlight {
+    color: hsl(var(--primary));
+  }
+
+  .gradient-banner {
+    background:
+      linear-gradient(
+        135deg,
+        hsl(var(--primary)),
+        hsl(var(--secondary))
+      );
+  }
+
+  .gradient-hero {
+    background:
+      radial-gradient(
+        ellipse at top,
+        hsla(var(--primary) / 0.10),
+        transparent 65%
+      );
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .premium-shadow {
+    box-shadow:
+      0 10px 40px rgba(15, 15, 15, 0.06);
+  }
+
+  .sub-heading-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium border;
+    background: rgba(255, 255, 255, 0.75);
+    border-color: hsl(var(--border));
+    color: hsl(var(--foreground));
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300;
+    background: hsl(var(--primary));
+    color: white;
+    box-shadow:
+      0 10px 30px hsla(var(--primary) / 0.18);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 border;
+    border-color: hsl(var(--border));
+    background: rgba(255, 255, 255, 0.7);
+    color: hsl(var(--foreground));
+  }
+
+  .btn-outline:hover {
+    background: hsl(var(--secondary));
+  }
+
+  .section-container {
+    @apply mx-auto max-w-[1280px] px-4 lg:px-8;
+  }
+
+  .section-light {
+    background: #ffffff;
+  }
+
+  .section-muted {
+    background: #f8f6f2;
+  }
+
+  .section-gradient {
+    background:
+      linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f8f6f2 100%
+      );
+  }
+
+  .heading-xl {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-4xl md:text-5xl font-bold leading-tight;
+  }
+
+  .text-muted-soft {
+    color: hsl(var(--muted-foreground));
+  }
+}
+
+/* ===============================
+   ANIMATIONS
+=============================== */
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float-in {
+  animation: float-in 0.5s ease-out forwards;
+}
+
+@keyframes soft-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  70% {
+    transform: scale(1.08);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.08);
+    opacity: 0;
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 2.5s infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+}
