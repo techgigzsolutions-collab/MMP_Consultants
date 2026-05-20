@@ -2,6 +2,7 @@ import AnnouncementBar from "@/components/sections/global/AnnouncementBar";
 import Header from "@/components/common/Header";
 import Hero from "@/components/sections/homepage/Hero";
 import DashboardPreview from "@/components/sections/homepage/DashboardPreview";
+import HeroSection from "@/components/legacy/HeroSection";
 import FeatureStats from "@/components/sections/homepage/FeatureStats";
 import Services from "@/components/sections/homepage/Services";
 import SplitFeature from "@/components/sections/homepage/SplitFeature";
@@ -19,6 +20,9 @@ const Index = () => {
       <Hero />
             <DashboardPreview />
       <Services />
+      
+      {/* Consulting Experience */}
+      <HeroSection />
       <FeatureStats />
 
       <SplitFeature />
