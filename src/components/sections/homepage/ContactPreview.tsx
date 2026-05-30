@@ -23,8 +23,6 @@ const ContactPreview = () => {
             <h3 className="mb-3 text-lg font-semibold text-foreground">Email</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               info@mmpconsultants.com.au
-              <br />projects@mmpconsultants.com.au
-              <br />mithra@mmpconsultants.com.au
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-card p-8 text-left">

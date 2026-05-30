@@ -69,8 +69,6 @@ const ContactPage = () => {
                   </div>
                   <h2 className="text-lg font-semibold text-foreground mb-2">Email</h2>
                   <p className="text-sm text-muted-foreground leading-relaxed">info@mmpconsultants.com.au</p>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">projects@mmpconsultants.com.au</p>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">mithra@mmpconsultants.com.au</p>
                 </motion.div>
                 <motion.div
                   className="rounded-3xl border border-border bg-card p-8"
