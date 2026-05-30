@@ -21,8 +21,9 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <span className="text-xl font-bold text-background">MMP Consultants</span>
-            </Link>
+                <img src="/logo.png" alt="MMP Consultants" className="h-18 w-44" />
+                <span className="sr-only">MMP Consultants</span>
+              </Link>
             <p className="text-background/50 text-sm leading-relaxed mb-4">
               MMP Consultants provides consulting, project coordination, and operational support to help businesses run more efficiently and confidently.
             </p>
@@ -71,14 +72,7 @@ const Footer = () => {
                 <Mail size={16} className="text-primary mt-0.5 flex-shrink-0" />
                 <a href="mailto:info@mmpconsultants.com.au" className="text-sm text-background/50 hover:text-primary transition-colors">info@mmpconsultants.com.au</a>
               </li>
-              <li className="flex items-start gap-2.5">
-                <Mail size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                <a href="mailto:projects@mmpconsultants.com.au" className="text-sm text-background/50 hover:text-primary transition-colors">projects@mmpconsultants.com.au</a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Mail size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                <a href="mailto:mithra@mmpconsultants.com.au" className="text-sm text-background/50 hover:text-primary transition-colors">mithra@mmpconsultants.com.au</a>
-              </li>
+             
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-primary mt-0.5 flex-shrink-0" />
                 <a

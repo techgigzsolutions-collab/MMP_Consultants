@@ -28,7 +28,8 @@ const Header = () => {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-heading font-bold text-foreground tracking-tight">MMP Consultants</span>
+          <img src="/logo.png" alt="MMP Consultants" className="h-18 w-auto" />
+          <span className="sr-only">MMP Consultants</span>
         </Link>
 
         {/* Desktop Nav */}
